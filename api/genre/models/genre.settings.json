@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres",
+  "info": {
+    "name": "genre",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "genre_name": {
+      "type": "string"
+    },
+    "games": {
+      "collection": "game",
+      "via": "genre"
+    }
+  }
+}

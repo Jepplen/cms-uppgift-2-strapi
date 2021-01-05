@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "review_content": {
+      "type": "text"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "profile": {
+      "model": "profile",
+      "via": "reviews"
+    },
+    "game_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "game": {
+      "model": "game",
+      "via": "reviews"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reviews"
+    }
+  }
+}

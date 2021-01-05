@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "name": "profile",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "profile_name": {
+      "type": "string",
+      "required": false
+    },
+    "profile_description": {
+      "type": "text",
+      "required": false
+    },
+    "profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "reviews": {
+      "via": "profile",
+      "collection": "review"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "profile"
+    },
+    "owner": {
+      "type": "string"
+    }
+  }
+}
