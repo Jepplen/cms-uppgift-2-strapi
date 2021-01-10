@@ -15,8 +15,8 @@
       "type": "string"
     },
     "games": {
-      "collection": "game",
-      "via": "genre"
+      "via": "genre",
+      "collection": "game"
     }
   }
 }

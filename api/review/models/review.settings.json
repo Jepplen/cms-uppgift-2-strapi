@@ -28,8 +28,8 @@
       "type": "string"
     },
     "game": {
-      "model": "game",
-      "via": "reviews"
+      "via": "reviews",
+      "model": "game"
     },
     "owner": {
       "type": "string"

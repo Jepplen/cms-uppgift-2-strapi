@@ -17,9 +17,6 @@
     "description": {
       "type": "text"
     },
-    "genre_name": {
-      "type": "string"
-    },
     "box_art": {
       "model": "file",
       "via": "related",
@@ -32,12 +29,12 @@
       "required": false
     },
     "genre": {
-      "via": "games",
-      "model": "genre"
+      "model": "genre",
+      "via": "games"
     },
     "reviews": {
-      "via": "game",
-      "collection": "review"
+      "collection": "review",
+      "via": "game"
     }
   }
 }
